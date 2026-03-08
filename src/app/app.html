@@ -1,11 +1,39 @@
 <app-header />
 <main>
   <app-hero />
-  <app-about />
-  <app-skills />
-  <app-experience />
-  <app-projects />
-  <app-vision />
-  <app-contact />
+  @defer (on viewport) {
+    <app-about />
+  } @placeholder {
+    <div class="min-h-[600px]"></div>
+  }
+  @defer (on viewport) {
+    <app-skills />
+  } @placeholder {
+    <div class="min-h-[500px]"></div>
+  }
+  @defer (on viewport) {
+    <app-experience />
+  } @placeholder {
+    <div class="min-h-[600px]"></div>
+  }
+  @defer (on viewport) {
+    <app-projects />
+  } @placeholder {
+    <div class="min-h-[700px]"></div>
+  }
+  @defer (on viewport) {
+    <app-vision />
+  } @placeholder {
+    <div class="min-h-[400px]"></div>
+  }
+  @defer (on viewport) {
+    <app-contact />
+  } @placeholder {
+    <div class="min-h-[600px]"></div>
+  }
 </main>
-<app-footer />
+@defer (on viewport) {
+  <app-footer />
+} @placeholder {
+  <div class="min-h-[80px]"></div>
+}

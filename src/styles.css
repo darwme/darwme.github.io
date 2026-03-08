@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #a5c9f3;
+  --color-background-light: #f8f9fa;
+  --color-background-dark: #1a1c1e;
+  --font-display: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+  }
+
+  body {
+    @apply bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased;
+  }
+}
